@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leinad's Reflection on Data Privacy and Cybercrime</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <style>
+        body {
+            background-image: url('citybg.gif');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover; 
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(255, 251, 251, 0.1);
+            background-color: rgba(244, 245, 251, 0.6);
+            backdrop-filter: blur(3px);
+            margin-bottom: 20px;
+        }
+        .reflection-box {
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #215463;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .conclusion-box {
+            background-color: rgba(207, 241, 240, 0.9); /* Light yellow background */
+            border: 1px solid #e5f5b8; /* Orange border */
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 20px; /* Adds some space above the box */
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        p, strong {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        strong {
+            color: #e74c3c;
+        }
+        #word-count {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            color: #96e9d8;
+        }
+        blockquote {
+            font-style: italic;
+            color: #7f8c8d;
+            margin: 20px 0;
+            border-left: 3px solid #e74c3c;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="word-count"></div>
+    <div class="container" id="container">
+        <div class="reflection-box" id="reflection-box"></div>
+    </div>
+
+    <py-script>
+        from js import document
+        
+        content = """
+        <h1>My Reflection on Data Privacy and Cybercrime</h1>
+        <p>
+            The Data Privacy and Awareness Campaign provided a crucial reminder for me regarding this significance. The campaign session also highlighted key concerns in the ever-evolving realm of cybersecurity and emphasized the necessity of safeguarding sensitive data, whether it belongs to individuals, companies or government.  
+        </p>
+        <p>
+            This campaign also gives attention on laws like the <strong>Republic Act 10173 – Data Privacy Act of 2012</strong>, which governs the collection, handling, and protection of personal information in the Philippines. This law is the Philippines' primary legislation that aims to protect the personal information of Filipino citizens. It ensures that organizations, both public and private, are held accountable for how they collect, store, and process personal data. While, <strong>The Republic Act 10175 – Cybercrime Prevention Act of 2012</strong>, addresses cybercrimes, including identity theft. Which involves the unauthorized acquisition, use, misuse, transfer, or deletion of another person's identity online.        
+        </p>
+        <p>
+            It also serves as a guide not only for <b>organizations</b> but also for <b>individuals</b>, reminding us to always consider the implications of sharing information online. It empowers them to take control of their personal data, ensuring that they are informed and can exercise their rights when it comes to their privacy.        
+        </p>
+        <blockquote>
+            As a <b>Computer Science Student</b> at the University of Perpetual Help System Dalta - Molino Campus, my exposure to various technologies has significantly shaped my awareness of how personal information is handled online.      
+        </blockquote> 
+        <blockquote>
+            Also, as being a <b>Perpetualite</b>, I realized that I must be responsible in protecting my own digital footprint while also preparing to contribute more to secure data in the professional world. Learning about encryption techniques, secure coding practices, and ways to mitigate cyber threats helped me understand that data privacy and cybersecurity are two sides of the same coin. We must be equally mindful of both to protect ourselves and others.     
+        </blockquote> 
+        <p>
+            <b>Phishing</b> was also tackled in the awareness campaign, this involves <strong>tricking individuals</strong> making them provide sensitive information through fake emails or websites that appear legitimate, it is the most common method of cyber-attack. Also, <b>Smishing</b> was tackled on the campaign. It is a lesser-known but equally dangerous threat, this a form of phishing that occurs through text messages (SMS). Another that was mentioned was <b>Identity Theft</b>, which is often the end goal of phishing and smishing attacks.         
+        </p>
+        <p> 
+            According to the campaign this usually occurs when a malicious actor/impersonator obtains enough personal information to impersonate someone else, opening up avenues for fraudulent financial transactions, accessing confidential accounts, and even committing crimes under the victim's name. This is why we should always be careful on what information we share online, especially to the people that we do not even know personally.       
+        </p>
+        <div class="conclusion-box">
+            <p>
+                In <b>conclusion</b>, The campaign explored practical ways to safeguard our personal data and information, such as enabling <b>two-factor authentication</b>, using <b>strong passwords</b>, and making sure to use <b>different passwords</b> for each account and avoid using the same password for multiple accounts. These are some of the simple steps, but they play a <b>vital</b> role in making sure that your account is secure and safe. 
+            </p>
+        </div>
+        """
+        
+        # Insert content into the reflection box
+        reflection_box = document.getElementById("reflection-box")
+        reflection_box.innerHTML = content
+        
+        # Calculate and display word count
+        word_count = len(content.split())
+        document.getElementById("word-count").innerHTML = f"Word Count: {word_count}"
+    </py-script>
+</body>
+</html>
